@@ -1,0 +1,110 @@
+[
+  {
+    "id": "attendance_policy",
+    "intent_name": "Attendance % & Shortage Cutoff",
+    "chip_label": "Attendance rules",
+    "sample_user_phrasings": [
+      "how is attendance calculated",
+      "what is the minimum attendance required",
+      "attendance shortage",
+      "condonation of attendance",
+      "what happens if my attendance is low",
+      "attendance percentage formula",
+      "minimum attendance to sit for exam",
+      "am I debarred for low attendance",
+      "attendance cutoff"
+    ],
+    "answer_text": "Attendance is calculated per course as (classes attended / classes held) x 100. The usual minimum is 75% per course to be eligible for the end-term exam. If you fall short for a genuine, documented reason (medical emergency, official college deputation, etc.), you can apply for condonation through the Academic Office before the end-term exam window opens. Falling below the cutoff without condonation typically means debarment from that course's end-term exam.",
+    "source": "Academic Handbook, Attendance Norms section (approximated for this demo — confirm the exact %, course-wise exceptions, and condonation process with the Academic Office)",
+    "fallback_contact": "Academic Office — academic.office@xlri.ac.in"
+  },
+  {
+    "id": "course_drop",
+    "intent_name": "Dropping / Withdrawing a Course",
+    "chip_label": "Drop a course",
+    "sample_user_phrasings": [
+      "how to drop a course",
+      "course withdrawal deadline",
+      "can I drop an elective",
+      "steps to withdraw from a subject",
+      "add drop window",
+      "last date to drop a course",
+      "how to withdraw from a subject",
+      "remove a course from my registration"
+    ],
+    "answer_text": "Courses can be dropped without penalty only within the add/drop window, usually the first 1-2 weeks of the term, via the course registration module on the ERP. After that window closes, dropping a course needs written approval from your Area Chair or Program Chair, and it will usually show as a 'W' (Withdrawn) on your transcript instead of being removed entirely. Dropping after the mid-term is generally not permitted.",
+    "source": "Academic Handbook, Course Registration & Add/Drop Policy (approximated — verify current-term deadlines on the ERP academic calendar)",
+    "fallback_contact": "Program Office / Academic Office"
+  },
+  {
+    "id": "bonafide_certificate",
+    "intent_name": "Requesting a Bonafide Certificate",
+    "chip_label": "Bonafide certificate",
+    "sample_user_phrasings": [
+      "how to get bonafide certificate",
+      "bonafide certificate request",
+      "documents needed for bonafide",
+      "how long does bonafide take",
+      "student certificate for bank loan",
+      "proof of enrollment letter",
+      "certificate for visa application"
+    ],
+    "answer_text": "Apply through the 'Certificate Request' module on the ERP (or a written request to the Academic Office if the module isn't available to you), stating the purpose — bank loan, visa, internship, insurance, etc. Processing usually takes 3-5 working days. You can collect a physical copy from the Academic Office or request a digitally signed copy if your use case accepts one.",
+    "source": "Student Services Handbook (approximated — confirm current turnaround time and digital-copy availability with Academic Office)",
+    "fallback_contact": "Academic Office — academic.office@xlri.ac.in"
+  },
+  {
+    "id": "fee_grievance",
+    "intent_name": "Fee-Related Grievances",
+    "chip_label": "Fee issue / grievance",
+    "sample_user_phrasings": [
+      "where do I complain about fee issues",
+      "fee refund",
+      "wrong fee charged",
+      "installment not reflecting",
+      "fee grievance",
+      "payment not updated on ERP",
+      "how to get a fee refund",
+      "fee receipt issue"
+    ],
+    "answer_text": "First check your payment gateway receipt/transaction ID against what's shown on the ERP — most mismatches are a sync delay and resolve within 24-48 hours. If it still doesn't reflect, or you were charged incorrectly, email the Finance & Accounts Office with your registration number, term, and a description of the issue (attach the receipt). Refunds, where applicable, are typically processed within 2-3 weeks of approval per the Fee Refund Policy.",
+    "source": "Finance Office / Fee Policy Circular (approximated — confirm current refund timelines with Accounts)",
+    "fallback_contact": "Finance & Accounts Office — accounts@xlri.ac.in"
+  },
+  {
+    "id": "cgpa_calculation",
+    "intent_name": "CGPA / SGPA Calculation",
+    "chip_label": "CGPA formula",
+    "sample_user_phrasings": [
+      "how is CGPA calculated",
+      "CGPA formula",
+      "how do grade points work",
+      "SGPA vs CGPA",
+      "credit weighted average",
+      "what is my grade point average",
+      "how to calculate SGPA",
+      "grading scale"
+    ],
+    "answer_text": "CGPA = sum(credits of course x grade point of course) / sum(credits), across all completed terms. SGPA uses the same formula but restricted to a single term. Grade points follow the scale defined in the Academic Handbook's grading table (commonly a 0-10 or letter-grade scale mapped to grade points). Your live, personalized CGPA is on the ERP under Grades/Transcript — this bot only explains the formula, not your actual number.",
+    "source": "Academic Handbook, Grading & CGPA Policy (approximated — confirm the exact grade-point scale table)",
+    "fallback_contact": "Academic Office — academic.office@xlri.ac.in"
+  },
+  {
+    "id": "grade_reevaluation",
+    "intent_name": "Grade Query / Re-evaluation",
+    "chip_label": "Grade re-evaluation",
+    "sample_user_phrasings": [
+      "how to request re-evaluation",
+      "grade grievance process",
+      "I disagree with my grade",
+      "revaluation deadline",
+      "how to challenge a grade",
+      "grade query window",
+      "recheck my answer script",
+      "wrong grade on transcript"
+    ],
+    "answer_text": "Grade queries must be raised within a fixed window after grades are released — commonly 3-5 working days. Start by raising it directly with the course instructor via the ERP grade-query form or email. If unresolved, escalate in writing to the Area Chair or the Grade Grievance Committee. Note: policy usually allows you to view/discuss your answer script with the instructor, not necessarily a full external re-evaluation.",
+    "source": "Academic Handbook, Grade Grievance Procedure (approximated — confirm the exact query window for the current term)",
+    "fallback_contact": "Course instructor first, then Academic Office"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "bot_name": "XLBot",
+  "welcome_message": "Hi, I'm XLBot — ask me about attendance rules, dropping a course, bonafide certificates, fee grievances, CGPA calculation, or grade re-evaluation. Tap a chip below or type your own question.",
+  "match_threshold": 0.34,
+  "unmatched_message": "I couldn't confidently match that to something I know yet. Here's my closest guess, or you can try one of these:",
+  "no_guess_message": "I don't have an answer for that yet. Here are the topics I can help with:",
+  "default_fallback_contact": "Academic Office — academic.office@xlri.ac.in",
+  "helpful_prompt": "Did this answer your question?",
+  "helpful_yes_response": "Glad that helped! Ask me anything else.",
+  "helpful_no_response": "Sorry about that — I'd suggest reaching out directly so it doesn't sit unresolved:"
+}

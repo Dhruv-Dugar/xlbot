@@ -73,11 +73,17 @@
   },
   {
     "id": "cgpa_calculation",
-    "intent_name": "CGPA / SGPA Calculation",
-    "chip_label": "CGPA formula",
+    "intent_name": "CQPI / CGPA Calculation",
+    "chip_label": "CQPI / CGPA formula",
     "sample_user_phrasings": [
       "how is CGPA calculated",
       "CGPA formula",
+      "what is CQPI",
+      "how is CQPI calculated",
+      "CQPI formula",
+      "CQPI vs CGPA",
+      "cumulative quality point index",
+      "what is my CQPI",
       "how do grade points work",
       "SGPA vs CGPA",
       "credit weighted average",
@@ -85,8 +91,8 @@
       "how to calculate SGPA",
       "grading scale"
     ],
-    "answer_text": "CGPA = sum(credits of course x grade point of course) / sum(credits), across all completed terms. SGPA uses the same formula but restricted to a single term. Grade points follow the scale defined in the Academic Handbook's grading table (commonly a 0-10 or letter-grade scale mapped to grade points). Your live, personalized CGPA is on the ERP under Grades/Transcript — this bot only explains the formula, not your actual number.",
-    "source": "Academic Handbook, Grading & CGPA Policy (approximated — confirm the exact grade-point scale table)",
+    "answer_text": "At XLRI, cumulative performance is officially tracked as CQPI (Cumulative Quality Point Index), not a standard CGPA — CQPI is the term that actually appears on your transcript, though people say 'CGPA' interchangeably in conversation. CQPI = sum(credits of course x grade point of course) / sum(credits), across all completed terms, on a 0-8 scale (not the 0-10 scale common at other institutes). The per-term version uses the same formula restricted to a single term. Your live, personalized CQPI is on the ERP under Grades/Transcript — this bot only explains the formula, not your actual number.",
+    "source": "Academic Handbook, Grading & CQPI Policy (approximated — confirm the exact grade-point scale table)",
     "fallback_contact": "Academic Office — academic.office@xlri.ac.in"
   },
   {

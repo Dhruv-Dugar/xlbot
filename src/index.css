@@ -1,17 +1,32 @@
 :root {
-  --text: #3f3b45;
-  --text-muted: #6b6375;
-  --text-h: #08060d;
-  --bg: #f4f3f7;
+  /* XLRI institutional palette (sampled from xlri.ac.in) */
+  --xlri-navy: #11336f;
+  --xlri-navy-deep: #0b2450;
+  --xlri-lime: #bccf17;
+
+  /* Prometheus palette (sampled from prometheus.xlri.ac.in) */
+  --prom-teal: #2dd4bf;
+  --prom-indigo: #3d4fa8;
+  --prom-cyan: #00e1ff;
+  --prom-gradient: linear-gradient(135deg, var(--prom-teal), var(--prom-indigo));
+
+  --text: #2b2f3a;
+  --text-muted: #656d7a;
+  --text-h: var(--xlri-navy-deep);
+  --bg: #f2f4f8;
   --surface: #ffffff;
-  --border: #e5e4e7;
-  --accent: #7c3aed;
+  --border: #dfe3ea;
+  --header-bg: var(--xlri-navy);
+  --header-text: #ffffff;
+  --accent: var(--prom-indigo);
   --accent-text: #ffffff;
   --bot-bubble: #ffffff;
-  --user-bubble: #7c3aed;
+  --user-bubble: var(--prom-gradient);
   --user-bubble-text: #ffffff;
-  --chip-bg: #ede9fe;
-  --chip-text: #5b21b6;
+  --chip-bg: #eef3c9;
+  --chip-text: var(--xlri-navy-deep);
+  --chip-border: #d7e08a;
+  --focus-ring: var(--prom-cyan);
 
   font: 16px/145% system-ui, 'Segoe UI', Roboto, sans-serif;
   color-scheme: light dark;
@@ -25,19 +40,23 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #d4d2d8;
-    --text-muted: #9ca3af;
+    --text: #d4d7de;
+    --text-muted: #8b93a3;
     --text-h: #f3f4f6;
-    --bg: #16171d;
-    --surface: #1f2028;
-    --border: #2e303a;
-    --accent: #a78bfa;
-    --accent-text: #16171d;
-    --bot-bubble: #262731;
-    --user-bubble: #7c3aed;
+    --bg: #0f1729;
+    --surface: #16203a;
+    --border: #263352;
+    --header-bg: #0b1120;
+    --header-text: #ffffff;
+    --accent: var(--prom-cyan);
+    --accent-text: #0b1120;
+    --bot-bubble: #182444;
+    --user-bubble: var(--prom-gradient);
     --user-bubble-text: #ffffff;
-    --chip-bg: #2e2440;
-    --chip-text: #c4b5fd;
+    --chip-bg: #22305a;
+    --chip-text: #d9e35c;
+    --chip-border: #33447a;
+    --focus-ring: var(--prom-cyan);
   }
 }
 

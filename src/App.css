@@ -10,20 +10,47 @@
 }
 
 .app-header {
-  padding: 16px 20px 12px;
-  border-bottom: 1px solid var(--border);
-  background: var(--surface);
+  padding: 14px 20px;
+  background: var(--header-bg);
+  border-bottom: 4px solid var(--xlri-lime);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-header-logos {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.app-header-logos img {
+  height: 34px;
+  width: 34px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 3px;
+}
+
+.app-header-text {
+  min-width: 0;
 }
 
 .app-header h1 {
-  font-size: 22px;
+  font-size: 20px;
   letter-spacing: -0.3px;
+  color: var(--header-text);
 }
 
 .app-subtitle {
-  color: var(--text-muted);
-  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12px;
   margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .chat-window {
@@ -139,10 +166,11 @@
 .chip {
   background: var(--chip-bg);
   color: var(--chip-text);
-  border: none;
+  border: 1px solid var(--chip-border);
   border-radius: 999px;
   padding: 6px 14px;
   font-size: 13px;
+  font-weight: 600;
   white-space: nowrap;
 }
 
@@ -167,13 +195,13 @@
 }
 
 .chat-input-row input:focus {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--focus-ring);
   outline-offset: -1px;
 }
 
 .chat-input-row button {
-  background: var(--accent);
-  color: var(--accent-text);
+  background: var(--user-bubble);
+  color: var(--user-bubble-text);
   border: none;
   border-radius: 999px;
   padding: 10px 20px;
@@ -181,15 +209,31 @@
 }
 
 .app-footer {
-  padding: 8px 16px 14px;
+  padding: 10px 16px 14px;
   background: var(--surface);
   border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .app-footer p {
   font-size: 11px;
   color: var(--text-muted);
   text-align: center;
+  line-height: 145%;
+}
+
+.app-footer-credit {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.app-footer-credit a {
+  color: var(--prom-indigo);
 }
 
 @media (max-width: 600px) {

@@ -134,9 +134,14 @@ it is not wired in.
 ## 7. Interface
 
 Single-page chat widget: message list + text input + a permanent row of 6
-quick-reply chips for the MVP intents. No auth, no theming system beyond
-light/dark mode following the OS setting. Plain CSS, no UI framework —
-readable chat bubbles were the bar, not visual polish.
+quick-reply chips for the MVP intents. No auth. Plain CSS, no UI framework.
+
+Visual design deliberately carries both sponsoring identities rather than a
+generic look: the navy (`#11336f`) header and lime-olive (`#bccf17`) accent
+stripe are sampled from xlri.ac.in's own header; the teal-to-indigo gradient
+on the send button and user bubbles, plus the cyan focus ring, are sampled
+from prometheus.xlri.ac.in. Both official logos (XLRI crest, Prometheus
+mark) sit in the header. Light/dark mode both follow the OS setting.
 
 ## 8. Success metrics (would track in production)
 
@@ -180,6 +185,20 @@ reason this MVP is scoped the way it is.
 - Verification of `faq.json` content against the actual current Academic
   Handbook (see the caveat in Section 5)
 
+## 11. Beyond XLRI academics: an ExLink onboarding extension
+
+Nothing about this architecture is specific to *enrolled-student* academic
+FAQs — `faq.json` is the only content-coupled piece, and `matcher.js` /
+the chat UI don't know or care what the intents are about. ExLink already
+owns the incoming-student onboarding funnel (admissions guidance, GDPI
+coordination, joining formalities), which is the same shape of problem:
+a fixed set of high-frequency process questions from people who don't yet
+know who to ask. Swap in an onboarding-flavored `faq.json` — required
+documents, hostel allotment process, fee payment deadlines pre-joining,
+orientation schedule — and the same bot, matcher, and UI serve ExLink's
+incoming batch with no code changes. Flagged here as a scoped extension
+idea, not built in this MVP.
+
 ## Running locally
 
 ```bash
@@ -203,16 +222,20 @@ Pages) works with zero config beyond pointing it at this repo.
 ```
 src/
   data/
-    faq.json        # the knowledge base (Section 5)
+    faq.json         # the knowledge base (Section 5)
     botConfig.json   # bot copy strings, match threshold
   lib/
     matcher.js       # Option A keyword/fuzzy matching
   hooks/
-    useChatBot.js     # chat state + intent-matching flow
+    useChatBot.js    # chat state + intent-matching flow
   components/
     ChatWindow.jsx
     MessageBubble.jsx
     QuickReplyChips.jsx
     ChatInput.jsx
+  assets/
+    xlri-logo.png        # official XLRI crest, from xlri.ac.in
+    prometheus-logo.png  # official Prometheus mark (with wordmark)
+    prometheus-icon.png  # official Prometheus mark (icon only, used in header)
   App.jsx
 ```
